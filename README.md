@@ -1,4 +1,4 @@
-# Golang Goji Sample Express42 practic
+# Golang Goji Sample WebApp Express42 practic example
 
 Sample Web Application based on https://github.com/elcct/defaultproject
 
