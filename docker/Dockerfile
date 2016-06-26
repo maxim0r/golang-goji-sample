@@ -12,7 +12,7 @@ USER webapp
 ADD ./public $HOME/public
 ADD ./views $HOME/views
 COPY $WEBAPP $HOME/$WEBAPP
-COPY config.toml.prod $HOME/config.toml
+COPY config.toml $HOME/config.toml
 
 WORKDIR $HOME
 

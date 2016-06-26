@@ -9,7 +9,7 @@ secure     = false
 [database]
 user     = "goji"
 password = "goji123"
-hostname = "localhost"
+hostname = "appdb"
 port     = "3306"
 database = "gojidb"
 
