@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 ENV HOME /home/webapp
-ENV WEBAPP goji-sample-pipeline-docker
+ENV WEBAPP goji-webapp
 
 RUN useradd -c "Webapp user" -d $HOME -m webapp
 
@@ -18,4 +18,4 @@ WORKDIR $HOME
 
 EXPOSE 8000
 
-ENTRYPOINT ["/home/webapp/goji-sample-pipeline-docker"]
+ENTRYPOINT ["/home/webapp/goji-webapp"]
