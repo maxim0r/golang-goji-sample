@@ -9,9 +9,9 @@ RUN mkdir -p $HOME
 
 USER webapp
 
-ADD ./public $HOME/public
-ADD ./views $HOME/views
-COPY $WEBAPP $HOME/$WEBAPP
+ADD ../public $HOME/public
+ADD ../views $HOME/views
+COPY ./$WEBAPP $HOME/$WEBAPP
 COPY config.toml $HOME/config.toml
 
 WORKDIR $HOME
