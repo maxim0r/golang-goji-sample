@@ -1,18 +1,18 @@
 version: "2"
 services:
-  db:
+  appdb:
     container_name: "database"
     image: mysql:5.5
-    ports:
-      - 3306:3306
+  enviroment:
+    MYSQL_DATABASE: gojidb
+    MYSQL_USER: goji
+    MYSQL_PASSWORD: goji123
   webapp:
     container_name: "webapp"
-    image: goji-tomcat-app:latest
-    build:
-      context: ./tomcat
+    image: maxor/goji-webapp
     depends_on:
-      - db
+      - appdb
     ports:
       - 8080:8080
     links:
-      - db
+      - appdb
