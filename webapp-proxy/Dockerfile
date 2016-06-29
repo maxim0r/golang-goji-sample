@@ -1,4 +1,4 @@
-FROM nginx
+FROM registry.local:5000/nginx
 
 ARG EXPOSEPORT
 ARG APPHOST
