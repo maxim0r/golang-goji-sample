@@ -1,4 +1,5 @@
-FROM registry.local:5000/nginx
+#FROM registry.local:5000/nginx
+FROM nginx
 
 ARG EXPOSEPORT
 ARG APPHOST
