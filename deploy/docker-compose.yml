@@ -5,7 +5,6 @@ services:
     image: mysql:5.5
     network_mode: "max-swarm-net"
     environment:
-#      - "constraint:node==max-swarm-master"
       - MYSQL_ROOT_PASSWORD=qwerty123
       - MYSQL_DATABASE=gojidb
       - MYSQL_USER=goji
@@ -14,12 +13,10 @@ services:
     container_name: "webapp"
     image: maxor/goji_webapp
     network_mode: "max-swarm-net"
-#    environment:
-#      - "constraint:node==max-swarm-01"
     depends_on:
       - appdb
-  proxy:
-    container_name: "proxy"
+  webproxy:
+    container_name: "webproxy"
     image: maxor/webapp-proxy
     network_mode: "max-swarm-net"
     environment:
