@@ -18,4 +18,5 @@ WORKDIR $HOME
 
 EXPOSE 8000
 
-CMD sleep 10 && /home/webapp/goji-webapp
+#CMD sleep 10 && /home/webapp/goji-webapp
+ENTRYPOINT ["/home/webapp/goji-webapp"]
