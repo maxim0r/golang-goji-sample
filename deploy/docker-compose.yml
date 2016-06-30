@@ -18,8 +18,6 @@ services:
       - "constraint:node==max-swarm-01"
     depends_on:
       - appdb
-    ports:
-      - 8000:8000
   proxy:
     container_name: "proxy"
     image: maxor/webapp-proxy
