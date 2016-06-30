@@ -26,3 +26,5 @@ services:
       - "constraint:node==max-swarm-master"
     ports:
       - 80:80
+    depends_on:
+      - webapp
